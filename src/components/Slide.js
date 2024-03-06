@@ -4,6 +4,10 @@ import "./Slide.css";
 import img2 from "../assets/slideImgs/slide_img2.png";
 import img3 from "../assets/slideImgs/slide_img3.png";
 import img4 from "../assets/slideImgs/slide_img4.png";
+import newImg1 from "../assets/slide1.jpg";
+import newImg2 from "../assets/slide2.jpg";
+import newImg3 from "../assets/s;ide3.jpg";
+import newImg4 from "../assets/slide4.jpg";
 import vid from "../assets/slideImgs/Shooting-Aspire-Vero-16-Sapphire-Banner.mp4";
 import Button from './Button';
 import { useNavigate } from 'react-router-dom';
@@ -17,38 +21,38 @@ function Slide() {
 
 >
   <div className="carousel-inner">
-  <div className="carousel-item active"  data-bs-interval={10000}>
-    <video className='d-block w-100'style={{objectFit:"contain",height:"100%"}} src={vid} autoPlay muted loop/>
-    <div  className="carousel-caption  d-block">
-        <h5>Immersive Visuals and Stunning Graphics</h5>
-        <p className="d-none d-md-block">Get ready to be amazed by our laptops' stunning visuals and graphics capabilities. </p>
+  <div className="carousel-item active c-item"  data-bs-interval={10000}>
+    <img className='d-block w-100 c-image' src={newImg1}/>
+    <div  className="carousel-caption d-block">
+        <p className="mt-5 fs-3 text-uppercase">Get ready to be amazed by our laptops' stunning visuals and graphics capabilities.</p>
+        <h1 className="mb-2 d-none  d-md-block">Immersive Visuals and Stunning Graphics</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div> 
     
     </div>
-    <div className="carousel-item "  data-bs-interval={4000}>
-      <img src={img3} className="d-block w-100" alt="..." />
-      <div data-aos="fade-up" className="carousel-caption  d-block">
-        <h5>Powerful Performance for Any Task</h5>
-        <p className="d-none d-md-block">Discover our wide range of high-performance laptops</p>
+    <div className="carousel-item c-item"  data-bs-interval={4000}>
+      <img src={newImg2} className="d-block w-100 c-image" alt="..." />
+      <div data-aos="fade-up" className="carousel-caption d-block">
+        <p className="mt-5 fs-3 text-uppercase">Discover our wide range of high-performance laptops</p>
+        <h1 className="d-none d-md-block">Powerful Performance for Any Task</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>
-    <div className="carousel-item" data-bs-interval={4000}>
-      <img src={img2} className="d-block w-100" alt="..." />
+    <div className="carousel-item c-item" data-bs-interval={4000}>
+      <img src={newImg3} className="d-block w-100 c-image" alt="..." />
       <div data-aos="fade-up" className="carousel-caption  d-block">
-        <h5>Sleek and Stylish Designs</h5>
-        <p className="d-none d-md-block">Experience the perfect blend of form and function with our collection of sleek and stylish laptops. </p>
+        <p className="mt-5 fs-3 text-uppercase">Experience the perfect blend of form and function with our collection of sleek and stylish laptops.</p>
+        <h1 className="d-none d-md-block">Sleek and Stylish Designs </h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
       
     </div>
     
-    <div  className="carousel-item" data-bs-interval={4000} > 
-      <img src={img4} className="d-block w-100" alt="..." />
+    <div  className="carousel-item c-item" data-bs-interval={4000} > 
+      <img src={newImg4} className="d-block w-100 c-image" alt="..." />
       <div data-aos="fade-up" className="carousel-caption d-block">
-        <h5>Stay Connected Anywhere, Anytime</h5>
-        <p className="d-none d-md-block">Never miss a beat with our laptops' seamless connectivity options. </p>
+        <p className="mt-5 fs-3 text-uppercase">Never miss a beat with our laptops' seamless connectivity options.</p>
+        <h1 className="d-none d-md-block"> Stay Connected Anywhere, Anytime</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>

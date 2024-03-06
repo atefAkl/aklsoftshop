@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import Logo from './Logo';
 import "./NavBar.css";
+import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import PersonIcon from '@mui/icons-material/Person';
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,8 +19,8 @@ function NavBar() {
   return (
     <nav className="navbar navbar-expand-lg">
     <div className="container">
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
+      <button className="navbar-toggler c-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="text-white"><MenuIcon/></span>
       </button>
       <Link className="navbar-brand" to="/"><Logo/></Link>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo03">

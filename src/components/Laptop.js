@@ -28,7 +28,7 @@ function Laptop({lap}) {
       }
       else{
         addToCart(id);
-        notifySuc(`You have added ${model} to Favorite`);
+        notifySuc(`You have added ${model} to Cart`);
       }
     }
     function handleAddToFav(itemId,img,brand,model,processor,ram,storage,graphicCard){
@@ -38,7 +38,7 @@ function Laptop({lap}) {
       else if(FavItems.some(item=>item.itemId == itemId)) return;
       else{
         addToFav(itemId,img,brand,model,processor,ram,storage,graphicCard);
-        notifySuc(`You have added ${model} to Cart`);
+        notifySuc(`You have added ${model} to Favorites`);
       }
     }
   return (
