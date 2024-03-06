@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './LaptopsList.css';
 
-import {LAPTOPS} from '../data/data.js';
+import {LAPTOPS} from '../../data/data.js';
 import Laptop from './Laptop.js';
 
 function LaptopsList({counter}) {

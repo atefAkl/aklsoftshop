@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import Logo from './Logo';
+import Logo from '../Reusable-Components/Logo';
 import "./NavBar.css";
 import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
@@ -8,9 +8,9 @@ import PersonIcon from '@mui/icons-material/Person';
 import SearchIcon from '@mui/icons-material/Search';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import HomeIcon from '@mui/icons-material/Home';
-import { useShopContext } from '../Context/ShopContextProvider';
-import DisplayUser from './DisplayUser';
-import { useAuthContext } from '../Context/AuthContextProvider';
+import { useShopContext } from '../../Context/ShopContextProvider';
+import DisplayUser from '../User/DisplayUser';
+import { useAuthContext } from '../../Context/AuthContextProvider';
 function NavBar() {
   const {User} = useAuthContext();
   const {handleOpen,getTotalAmount,getTotalFavs} = useShopContext();
@@ -24,7 +24,7 @@ function NavBar() {
       </button>
       <Link className="navbar-brand" to="/"><Logo/></Link>
       <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
-      <form className="d-none d-md-flex m-auto">
+      <form className="d-none d-lg-flex m-auto">
           <input className="" type="text" placeholder="Search" aria-label="Search"/>
           <button className="" type="submit"><SearchIcon/></button>
         </form>

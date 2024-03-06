@@ -1,18 +1,12 @@
 import React from 'react'
 import "./Slide.css";
-// import img1 from "../assets/slideImgs/img_slide.jpg";
-import img2 from "../assets/slideImgs/slide_img2.png";
-import img3 from "../assets/slideImgs/slide_img3.png";
-import img4 from "../assets/slideImgs/slide_img4.png";
-import newImg1 from "../assets/slide1.jpg";
-import newImg2 from "../assets/slide2.jpg";
-import newImg3 from "../assets/s;ide3.jpg";
-import newImg4 from "../assets/slide4.jpg";
-import vid from "../assets/slideImgs/Shooting-Aspire-Vero-16-Sapphire-Banner.mp4";
-import Button from './Button';
-import { useNavigate } from 'react-router-dom';
+import newImg1 from "../../assets/slideImgs/slide1.jpg";
+import newImg2 from "../../assets/slideImgs/slide2.jpg";
+import newImg3 from "../../assets/slideImgs/s;ide3.jpg";
+import newImg4 from "../../assets/slideImgs/slide4.jpg";
+import Button from '../Reusable-Components/Button';
 function Slide() {
-  const navigate = useNavigate();
+
   return (
     <div
   id="carouselExampleInterval"

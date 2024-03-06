@@ -2,7 +2,7 @@ import React from 'react'
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import "./TopTape.css";
 import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useShopContext } from '../Context/ShopContextProvider';
+import { useShopContext } from '../../Context/ShopContextProvider';
 function TopTape() {
     const {getPosition,position,isLoading,cityName,country,emoji}= useShopContext();
   return (

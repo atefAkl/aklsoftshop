@@ -1,7 +1,7 @@
 import React from 'react'
-import { SocialIcons } from '../data/data'
-import PaymentImg from '../assets/payments.png'
-import  Button  from './Button.js';
+import { SocialIcons } from '../../data/data.js'
+import PaymentImg from '../../assets/payments.png'
+import  Button  from '../Reusable-Components/Button.js';
 import "./Footer.css"; 
 function Footer() {
   return (

@@ -1,16 +1,15 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
-import Slide from "../components/Slide"
-import BrandSlide from '../components/BrandSlide'
-import Footer from '../components/Footer'
-import AdvantagesSec from '../components/AdvantagesSec'
-import TopProducts from '../components/TopProducts'
-import Cart from '../components/Cart'
+import NavBar from '../components/NavBar/NavBar.js'
+import Slide from "../components/Slide/Slide.js"
+import BrandSlide from '../components/HomeLayouts/BrandSlide.js'
+import Footer from '../components/Footer/Footer.js'
+import AdvantagesSec from '../components/HomeLayouts/AdvantagesSec.js'
+import TopProducts from '../components/HomeLayouts/TopProducts.js'
+import Cart from '../components/Cart/Cart.js';
 import { ToastContainer } from 'react-toastify';
 import { useShopContext } from '../Context/ShopContextProvider'
-import DisplayUser from '../components/DisplayUser'
-import GoldSection from '../components/GoldSection'
-import TopTape from '../components/TopTape'
+import GoldSection from '../components/HomeLayouts/GoldSection.js'
+import TopTape from '../components/HomeLayouts/TopTape.js'
 
 function Home() {
   const {isOpened} = useShopContext();

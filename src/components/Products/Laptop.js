@@ -5,9 +5,9 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteIcon from '@mui/icons-material/Favorite';
-import Button from './Button';
-import { useAuthContext } from '../Context/AuthContextProvider';
-import { useShopContext } from '../Context/ShopContextProvider';
+import Button from '../Reusable-Components/Button';
+import { useAuthContext } from '../../Context/AuthContextProvider';
+import { useShopContext } from '../../Context/ShopContextProvider';
 
 function Laptop({lap}) {
   const {User} = useAuthContext();

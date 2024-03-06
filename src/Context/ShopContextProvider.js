@@ -44,7 +44,9 @@ function addToFav(itemId,img,brand,model,processor,ram,storage,graphicCard){
     setFavItems((prev) => ([...prev,{itemId,img,brand,model,processor,ram,storage,graphicCard}]))
     console.log(FavItems);
 }
-
+function deleteItemFromCart(itemId){
+    setCartItems((prev) => ({...prev,[itemId] : 0}))
+}
 
 function removeFromFav(Id){
     setFavItems((prev) => prev.filter((item)=>item.itemId !== Id))
@@ -109,7 +111,7 @@ function removeFromFav(Id){
         addToCart,
         removeFromCart,cartItems,
         getTotalPrice,getTotalAmount,
-        getDefaultCart,setCartItems,
+        getDefaultCart,setCartItems,deleteItemFromCart,
         addToFav,removeFromFav,FavItems,
         getTotalFavs,getPosition,
         position,isLoading,cityName,country,emoji

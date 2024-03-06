@@ -1,9 +1,9 @@
 import React from 'react'
 import "./Cart.css";
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-import { useShopContext } from '../Context/ShopContextProvider';
-import emptyCart from "../assets/emptyCart.png";
-import { LAPTOPS } from '../data/data';
+import { useShopContext } from '../../Context/ShopContextProvider';
+import emptyCart from "../../assets/emptyCart.png";
+import { LAPTOPS } from '../../data/data';
 import CartItem from './CartItem';
 import { toast } from 'react-toastify';
 function Cart() {
@@ -22,9 +22,12 @@ function Cart() {
         notifyErr(`Your Cart is empty!`)
       }
       else{
-        notifySuc(`Done You Purchased ${TotalPrice}$`)
+        notifySuc(`Payment completed successfully! You Purchased ${TotalPrice}$`)
         setCartItems(getDefaultCart());
       }
+    }
+    function handleClear(){
+      setCartItems(getDefaultCart());
     }
   return (
     <div className='cart'
@@ -32,9 +35,11 @@ function Cart() {
     data-aos-anchor="#example-anchor"
     data-aos-offset="500"
     data-aos-duration="500">
+
+    {TotalPrice!==0 ? <button onClick={()=>handleClear()} className='clearBtn'>Clear Cart</button> : null}
     <button className='closeBtn' onClick={()=>handleOpen()}><CloseOutlinedIcon/></button>
         <h3 className='p-1 mb-5'>Cart</h3>
-      
+
         <div className='cartItems'>
             {LAPTOPS.map((lap)=>{
                 if(cartItems[lap.id] !== 0){

@@ -1,15 +1,14 @@
 import './App.css';
 import { BrowserRouter, HashRouter, Navigate, Route, Routes } from 'react-router-dom';
-// import Home from './pages/Home';
 import 'react-toastify/dist/ReactToastify.css';
 import AppLayout from './pages/AppLayout';
 import Favorite from './pages/Favorite';
 import React from 'react';
-import Loader from './components/Loader';
+import Loader from './components/Reusable-Components/Loader';
 import { ShopContextProvider } from './Context/ShopContextProvider';
 import Register from './pages/Register';
-import LoginForm from './components/LoginForm';
-import SignUpForm from './components/SignUpForm';
+import LoginForm from './components/Register/LoginForm';
+import SignUpForm from './components/Register/SignUpForm';
 import { AuthContextProvider } from './Context/AuthContextProvider';
 const LazyHome = React.lazy(()=> import("./pages/Home"))
 

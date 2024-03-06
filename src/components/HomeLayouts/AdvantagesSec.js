@@ -1,7 +1,7 @@
 import React from 'react'
 import './AdvantagesSec.css';
-import { advantagesSection } from '../data/data'
-import MainHeading from './MainHeading';
+import { advantagesSection } from '../../data/data'
+import MainHeading from '../Reusable-Components/MainHeading';
 
 function AdvantagesSec() {
   return (

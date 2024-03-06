@@ -2,8 +2,8 @@ import React from 'react'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import { BRANDS } from '../data/data';
-import MainHeading from './MainHeading';
+import { BRANDS } from '../../data/data';
+import MainHeading from '../Reusable-Components/MainHeading';
 function BrandSlide() {
     const settings = {
         dots: true,

@@ -1,8 +1,8 @@
-import  Button  from './Button.js'
+import  Button  from '../Reusable-Components/Button.js'
 import React, { useState } from 'react'
-import firebase from "../firebaseConfig.js";
+import firebase from "../../firebaseConfig.js";
 import { toast } from 'react-toastify';
-import { useAuthContext } from '../Context/AuthContextProvider.js';
+import { useAuthContext } from '../../Context/AuthContextProvider.js';
 function SignUpForm() {
     const [Email,setEmail] = useState("")
     const [Password,setPassword] = useState("");

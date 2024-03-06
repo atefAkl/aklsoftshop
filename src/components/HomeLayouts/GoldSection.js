@@ -1,5 +1,5 @@
 import React from 'react'
-import GoldImg from "../assets/GoldImage.jpg"
+import GoldImg from "../../assets/GoldImage.jpg"
 import "./GoldSection.css";
 function GoldSection() {
   return (

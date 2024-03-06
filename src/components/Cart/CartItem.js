@@ -1,11 +1,12 @@
 import React from 'react'
-import { useShopContext } from '../Context/ShopContextProvider'
-
+import { useShopContext } from '../../Context/ShopContextProvider'
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 function CartItem({lap}) {
-    const {cartItems,addToCart,removeFromCart} = useShopContext();
+    const {cartItems,addToCart,removeFromCart,deleteItemFromCart} = useShopContext();
     const LapTotalPrice = Math.round(cartItems[lap.id] * lap.price);
   return (
     <div className='cartItem row mb-4 align-items-center px-1'>
+    <button className='delItem' onClick={()=>deleteItemFromCart(lap.id)}><CloseOutlinedIcon/></button>
     <div className='col-6 d-flex fColum'>
         <div className='wrapImage'>
             <img src={lap.image}/>

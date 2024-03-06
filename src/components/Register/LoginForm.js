@@ -1,8 +1,8 @@
-import  Button  from './Button.js'
+import  Button  from '../Reusable-Components/Button.js'
 import React, { useState } from 'react'
-import firebase from "../firebaseConfig.js";
+import firebase from "../../firebaseConfig.js";
 import { toast } from 'react-toastify';
-import { useAuthContext } from '../Context/AuthContextProvider.js';
+import { useAuthContext } from '../../Context/AuthContextProvider.js';
 import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
@@ -16,7 +16,7 @@ function LoginForm() {
     async function handleSubmit(e){
         e.preventDefault();
         try{
-            Login(Email,Password);
+           await Login(Email,Password);
             navigate("/");
         }
         catch(err){

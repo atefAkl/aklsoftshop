@@ -51,12 +51,40 @@
     opacity: 1;
     background-color: #fff;
 }
+.cart .clearBtn{
+    position: absolute;
+    top: 5;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 10px 20px;
+    background-color: var(--light-red);
+    margin-top: 5px;
+}
 .cart .closeBtn svg{
     height: 20px;
 }
 .cart .cartItems{
     overflow-y: auto;
     overflow-x: hidden;
+   
+}
+.cart .cartItems .cartItem{
+    position: relative;
+}
+.delItem{
+    position: absolute;
+    width: 20px !important;
+    font-size: smaller;
+    border-radius: 50%;
+    top: 50%;
+    right: 25%;
+    display: flex;
+    transform: translate(0,-50%);
+    justify-content: center;
+    background-color: var(--silver);
+}
+.delItem svg{
+    height: 20px;
 }
 .cart .cartItems .cartItem .fColum{
     gap: 20px;

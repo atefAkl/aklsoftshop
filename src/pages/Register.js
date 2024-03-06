@@ -3,7 +3,7 @@ import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import './Register.css';
 import { ToastContainer } from 'react-toastify';
 import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
-import  Button  from '../components/Button.js';
+import  Button  from '../components/Reusable-Components/Button.js';
 function Register() {
   const navigate = useNavigate();
   return (
