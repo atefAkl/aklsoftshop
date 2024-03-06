@@ -11,6 +11,9 @@
 .navbar form{
     position: relative;
 }
+.navbar-toggler{
+    border: 2px solid red;
+}
 .navbar form input{
     width: 400px;
     padding: 6px 10px;

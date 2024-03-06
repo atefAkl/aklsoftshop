@@ -1,13 +1,3 @@
 .carousel{
     margin-top: 132px;
 }
-
-@media screen and (max-width : 500px) {
-     .carousel-caption{
-        font-size: 0.5rem;
-     }
-     .carousel-caption h5{
-        margin-top: 0px;
-     }
-    
-}

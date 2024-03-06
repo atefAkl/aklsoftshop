@@ -21,16 +21,16 @@ function Slide() {
     <video className='d-block w-100'style={{objectFit:"contain",height:"100%"}} src={vid} autoPlay muted loop/>
     <div  className="carousel-caption  d-block">
         <h5>Immersive Visuals and Stunning Graphics</h5>
-        <p>Get ready to be amazed by our laptops' stunning visuals and graphics capabilities. </p>
+        <p className="d-none d-md-block">Get ready to be amazed by our laptops' stunning visuals and graphics capabilities. </p>
         <Button  type="primaryy">Shop Now</Button>
-      </div>
+      </div> 
     
     </div>
     <div className="carousel-item "  data-bs-interval={4000}>
       <img src={img3} className="d-block w-100" alt="..." />
       <div data-aos="fade-up" className="carousel-caption  d-block">
         <h5>Powerful Performance for Any Task</h5>
-        <p>Discover our wide range of high-performance laptops</p>
+        <p className="d-none d-md-block">Discover our wide range of high-performance laptops</p>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>
@@ -38,7 +38,7 @@ function Slide() {
       <img src={img2} className="d-block w-100" alt="..." />
       <div data-aos="fade-up" className="carousel-caption  d-block">
         <h5>Sleek and Stylish Designs</h5>
-        <p>Experience the perfect blend of form and function with our collection of sleek and stylish laptops. </p>
+        <p className="d-none d-md-block">Experience the perfect blend of form and function with our collection of sleek and stylish laptops. </p>
         <Button  type="primaryy">Shop Now</Button>
       </div>
       
@@ -48,7 +48,7 @@ function Slide() {
       <img src={img4} className="d-block w-100" alt="..." />
       <div data-aos="fade-up" className="carousel-caption d-block">
         <h5>Stay Connected Anywhere, Anytime</h5>
-        <p>Never miss a beat with our laptops' seamless connectivity options. </p>
+        <p className="d-none d-md-block">Never miss a beat with our laptops' seamless connectivity options. </p>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>

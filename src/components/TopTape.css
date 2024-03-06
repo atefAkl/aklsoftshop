@@ -12,7 +12,7 @@
 }
 .TopTap .container{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 .TopTap .container >div{
@@ -28,4 +28,9 @@
     color: var(--silver);
     border-radius: 30px;
     outline: none; 
+}
+@media screen and (max-width:500px) {
+    .address{
+        font-size: 14px;
+    }
 }
