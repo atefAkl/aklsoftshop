@@ -1,0 +1,20 @@
+.advSec span{
+    color: var(--green);
+}
+.advSec span svg{
+    height: 70px;
+    width: 70px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+}
+.advSec > div{
+    display: flex;
+    gap: 15px;
+  
+}
+.advSec > div h5{
+    font-weight: bold;
+}
+.advSec > div p{
+    color: var(--brown);
+}

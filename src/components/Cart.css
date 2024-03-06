@@ -1,0 +1,92 @@
+.cart{
+    position: fixed;
+    top: 85px;
+    right: 0;
+    width: 400px;
+    height: calc(100% - 85px);
+    background-color: #333;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    color: var(--silver);
+    box-shadow: 0px -2px 5px 3px #8c8b8b78;
+}
+.cart .cartFooter{
+    margin-top: auto;
+}
+.cart .cartFooter{
+    display: flex;
+}
+.cart .cartFooter button,.cart .cartFooter span{
+    width: 50%;
+    text-align: center;
+    padding: 10px 20px;
+}
+.cart .cartFooter button{
+    background-color: var(--green);
+    transition: 0.3s;
+}
+.cart .cartFooter button:hover{
+    background-color: #ddd;
+}
+.cart .cartFooter span{
+    background-color: #e9b005;
+    color: #000;
+}
+.cart .closeBtn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 2px;
+    opacity: 0.7;
+    transition: 0.2s;
+    
+}
+.cart .closeBtn:hover{
+    opacity: 1;
+    background-color: #fff;
+}
+.cart .closeBtn svg{
+    height: 20px;
+}
+.cart .cartItems{
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.cart .cartItems .cartItem .fColum{
+    gap: 20px;
+    align-items: center;
+}
+.cart .cartItems .cartItem .wrapImage{
+    width: 55px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart .cartItems .cartItem .wrapImage img{
+    object-fit: contain;
+    object-position: center;
+    aspect-ratio: 0.9;
+    width: 35px;
+}
+.cart .cartItems .cartItem .LColum{
+    display: flex;
+    gap: 10px;
+
+}
+.cart .cartItems .cartItem .LColum button{
+    background-color: var(--silver);
+    font-size: 18px;
+    padding: 0px 3px ;
+    border-radius: 7px;
+    
+}

@@ -1,0 +1,38 @@
+.FavContainer{
+    /* display: flex;
+    justify-content: center; */
+    margin: 200px 0;
+    padding: 20px;
+}
+.FavList{
+    list-style: none;
+}
+.fav-item{
+    display: flex;
+    box-shadow: 0px 0px 1px 1px var(--silver);
+    padding: 10px;
+    border-radius: 8px;
+    transition: 0.5s;
+    position: relative;
+    font-weight: bold;
+}
+.fav-item:hover{
+    box-shadow: 0px 0px 5px 5px var(--silver); ;
+}
+.DelBtn{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    background-color: #ddd;
+    padding: 2px;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.DelBtn:hover{
+    opacity: 1;
+    background-color: var(--light-red);
+}

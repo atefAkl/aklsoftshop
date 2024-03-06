@@ -1,0 +1,18 @@
+.pagContainer{
+    margin-top: 400px;
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+    list-style: none;
+    align-items: center;
+}
+.pagItem{
+    padding: 5px 10px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.pagItem:hover,.activePagItem{
+    background-color: var(--green);
+    color: #000;
+}

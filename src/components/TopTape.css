@@ -1,0 +1,31 @@
+.TopTap{
+    position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--light-red);
+    z-index: 999;
+    padding: 5px;
+    color: #fff;
+    color: #333;
+}
+.TopTap .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.TopTap .container >div{
+    display: flex;
+    justify-content: space-between;
+}
+.TopTap .container > .right{
+    width: 180px;
+}
+.TopTap .locationBtn{
+    padding: 5px 10px;
+    background-color: #333;
+    color: var(--silver);
+    border-radius: 30px;
+    outline: none; 
+}

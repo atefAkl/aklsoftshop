@@ -1,0 +1,127 @@
+import React, { createContext, useContext, useEffect, useState } from 'react'
+import {LAPTOPS} from "../data/data";
+import { useLocalStorage } from '../Hooks/useLocalStorage';
+import { useGeolocation } from '../Hooks/useGeolocation';
+const ShopContext = createContext();
+    function getDefaultCart(){
+        let cart = {};
+        for(let i = 1; i < LAPTOPS.length+1;i++){
+            cart[i] = 0;
+        }
+        return cart;
+    }
+    const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client?"
+
+    function convertToEmoji(countryCode) {
+        const codePoints = countryCode
+          .toUpperCase()
+          .split("")
+          .map((char) => 127397 + char.charCodeAt());
+        return String.fromCodePoint(...codePoints);
+      }
+function ShopContextProvider({children}) {
+    const [isOpened,setIsOpened] = useState(false);
+    const [cartItems,setCartItems] = useLocalStorage(getDefaultCart(),"Cart");
+    const [FavItems,setFavItems] = useLocalStorage([],"Favorites");
+    const {position, getPosition, isLoading} = useGeolocation();
+    const [myPosition,setMyPosition] = useState([0,0]);
+    const [cityName, setCityName] = useLocalStorage("","City");
+    const [country, setCountry] = useLocalStorage("","Country");
+    const [emoji,setEmoji] = useState("","Emoji");
+    const [lat,lng] = myPosition;
+    function handleOpen(){
+        setIsOpened((isOpened) => !isOpened);
+    }
+function addToCart(itemId){
+    setCartItems((prev) => ({...prev, [itemId] : prev[itemId] + 1}))
+}
+function removeFromCart(itemId){
+    setCartItems((prev) => ({...prev,[itemId] : prev[itemId] - 1}))
+}
+
+function addToFav(itemId,img,brand,model,processor,ram,storage,graphicCard){
+    
+    setFavItems((prev) => ([...prev,{itemId,img,brand,model,processor,ram,storage,graphicCard}]))
+    console.log(FavItems);
+}
+
+
+function removeFromFav(Id){
+    setFavItems((prev) => prev.filter((item)=>item.itemId !== Id))
+}
+    function getTotalPrice(){
+        let total = 0;
+        for(let item in cartItems){
+            if(cartItems[item] > 0){
+                let itemInfo = LAPTOPS.find((lap) => lap.id === Number(item));
+                total += itemInfo.price * cartItems[item] 
+            }
+        }
+        return Math.round(total);
+    }
+    function getTotalAmount(){
+        let total = 0;
+        for(let item in cartItems){
+            if(cartItems[item] > 0){
+                total +=  cartItems[item] 
+            }
+        }
+        return Math.round(total);
+    }
+
+    function getTotalFavs(){
+        return FavItems.length;
+    }
+    useEffect(()=>{
+        if(position){
+            setMyPosition([position.lat,position.lng])
+        }
+    },[position])
+    useEffect(()=>{
+        if(!lat && !lng) return;
+        async function fetchCityByPosition(){
+          try{
+            const res = await fetch(`${BASE_URL}latitude=${lat}&longitude=${lng}`);
+            if(!res.ok) throw new Error("failed to fetch data");
+            const data = await res.json();
+            console.log(data);
+            if(!data.countryCode) throw new Error("it doest'n seem to be a city. click somewhere else 🙂")
+            setCityName(data.city || data.locality || "")
+            setCountry(data.countryName)
+            setEmoji(convertToEmoji(data.countryCode))
+          }
+          catch (err){
+            console.log(err.message)
+          }
+          finally{
+            console.log("success")
+          }
+        }
+        fetchCityByPosition();
+      },[lat,lng])
+
+   
+
+  return (
+   <ShopContext.Provider value={
+    {handleOpen,
+        isOpened,
+        addToCart,
+        removeFromCart,cartItems,
+        getTotalPrice,getTotalAmount,
+        getDefaultCart,setCartItems,
+        addToFav,removeFromFav,FavItems,
+        getTotalFavs,getPosition,
+        position,isLoading,cityName,country,emoji
+
+    }}>
+    {children}
+   </ShopContext.Provider>
+  )
+}
+function useShopContext(){
+    const context = useContext(ShopContext);
+    return context;
+}
+
+export { ShopContextProvider, useShopContext}

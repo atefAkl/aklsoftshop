@@ -1,0 +1,66 @@
+.register{
+    height: 100vh;
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.register >button{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.register .wrapper{
+    background-color: hsl(0, 0%, 20%);
+    color: var(--silver);
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    height: 450px;
+    border-top: 5px solid var(--light-red);
+    box-shadow: 0px 0px 5px 2px var(--light-red);
+}
+.register .wrapper .registerNav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+.register .wrapper .registerNav li{
+    width: 96px;
+    text-align: center;
+}
+.register .wrapper .registerNav a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    color: #333;
+    background-color: var(--silver);
+    transition: 0.3s;
+}
+.register .wrapper .registerNav a.active{
+    color: #333;
+    background-color: var(--green);
+}
+.register h5{
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding: 10px 0px;
+}
+.register form input{
+    display: block;
+    width: 100%;
+    /* border-radius: 8px; */
+    margin: 10px 0px;
+    outline: none;
+    padding: 5px;
+}
+.register form:not(){
+    text-align: center;
+}
