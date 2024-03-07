@@ -11,7 +11,7 @@ import { useShopContext } from '../../Context/ShopContextProvider';
 
 function Laptop({lap}) {
   const {User} = useAuthContext();
-  const {addToCart,cartItems,addToFav,FavItems} = useShopContext();
+  const {addToCart,cartItems,addToFav,FavItems,removeFromFav,deleteItemFromCart} = useShopContext();
   const itemAmount = cartItems[lap.id];
 
 
@@ -21,11 +21,18 @@ function Laptop({lap}) {
       const notifySuc = (msg) => toast.success(msg, {
         position: "top-center"
       });
+      const notifyWarn = (msg) => toast.warn(msg, {
+        position: "top-center"
+      });
 
     function handleAddToCart(id,model){
       if(User === null){
         notify("You Don't Have An Account!")
+      } else if(itemAmount > 0){
+        deleteItemFromCart(id);
+        notifyWarn(`you removed ${model} from cart`)
       }
+
       else{
         addToCart(id);
         notifySuc(`You have added ${model} to Cart`);
@@ -35,7 +42,10 @@ function Laptop({lap}) {
       if(User === null){
         notify("You Don't Have An Account!")
       }
-      else if(FavItems.some(item=>item.itemId == itemId)) return;
+      else if(FavItems.some(item=>item.itemId == itemId)){
+        removeFromFav(itemId);
+        notifyWarn(`you removed ${model} form Favorite List!`)
+      }
       else{
         addToFav(itemId,img,brand,model,processor,ram,storage,graphicCard);
         notifySuc(`You have added ${model} to Favorites`);
