@@ -10,9 +10,10 @@ import { ToastContainer } from 'react-toastify';
 import { useShopContext } from '../Context/ShopContextProvider'
 import GoldSection from '../components/HomeLayouts/GoldSection.js'
 import TopTape from '../components/HomeLayouts/TopTape.js'
+import LaptopDetails from '../components/Products/LaptopDetails.js'
 
 function Home() {
-  const {isOpened} = useShopContext();
+  const {isOpened,showDetails} = useShopContext();
   
   return (
     <div className='home' style={{overflow:"hidden"}}>
@@ -23,6 +24,7 @@ function Home() {
         {isOpened? <Cart/> : null}     
         <BrandSlide/>
         <TopProducts/>
+        {showDetails? <LaptopDetails/>:null}
         <GoldSection/>
         <AdvantagesSec/>
         <Footer/>

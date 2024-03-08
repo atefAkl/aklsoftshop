@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useReducer, useState } from 'react'
 import {LAPTOPS} from "../data/data";
 import { useLocalStorage } from '../Hooks/useLocalStorage';
 import { useGeolocation } from '../Hooks/useGeolocation';
@@ -19,6 +19,20 @@ const ShopContext = createContext();
           .map((char) => 127397 + char.charCodeAt());
         return String.fromCodePoint(...codePoints);
       }
+    const initialState={
+        showDetails:false,
+        LaptopId:null
+    }
+    function reducer(state,action){
+        switch(action.type){
+            case "opened":
+                return {...state,showDetails:true,LaptopId:action.payload}
+            case "closed":
+                return {...state,showDetails:false,LaptopId:null}
+            default:
+                throw new Error("Unknown Action")
+        }
+    }
 function ShopContextProvider({children}) {
     const [isOpened,setIsOpened] = useState(false);
     const [cartItems,setCartItems] = useLocalStorage(getDefaultCart(),"Cart");
@@ -29,7 +43,8 @@ function ShopContextProvider({children}) {
     const [country, setCountry] = useLocalStorage("","Country");
     const [emoji,setEmoji] = useState("","Emoji");
     const [lat,lng] = myPosition;
-    function handleOpen(){
+    const [{showDetails,LaptopId},dispatch]= useReducer(reducer,initialState);
+function handleOpen(){
         setIsOpened((isOpened) => !isOpened);
     }
 function addToCart(itemId){
@@ -113,7 +128,7 @@ function removeFromFav(Id){
         getTotalPrice,getTotalAmount,
         getDefaultCart,setCartItems,deleteItemFromCart,
         addToFav,removeFromFav,FavItems,
-        getTotalFavs,getPosition,
+        getTotalFavs,getPosition,dispatch,showDetails,LaptopId,
         position,isLoading,cityName,country,emoji
 
     }}>

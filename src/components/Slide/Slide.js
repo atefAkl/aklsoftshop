@@ -15,38 +15,34 @@ function Slide() {
 
 >
   <div className="carousel-inner">
-  <div className="carousel-item active c-item"  data-bs-interval={10000}>
+  <div className="carousel-item active c-item"  data-bs-interval={3000}>
     <img className='d-block w-100 c-image' src={newImg1}/>
-    <div  className="carousel-caption d-block">
-        <p className="mt-5 fs-3 text-uppercase">Get ready to be amazed by our laptops' stunning visuals and graphics capabilities.</p>
-        <h1 className="mb-2 d-none  d-md-block">Immersive Visuals and Stunning Graphics</h1>
+    <div  className="carousel-caption d-block top-50">
+        <h1 className="mb-5 d-block">Immersive Visuals and Stunning Graphics</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div> 
     
     </div>
-    <div className="carousel-item c-item"  data-bs-interval={4000}>
+    <div className="carousel-item c-item"  data-bs-interval={3000}>
       <img src={newImg2} className="d-block w-100 c-image" alt="..." />
-      <div data-aos="fade-up" className="carousel-caption d-block">
-        <p className="mt-5 fs-3 text-uppercase">Discover our wide range of high-performance laptops</p>
-        <h1 className="d-none d-md-block">Powerful Performance for Any Task</h1>
+      <div data-aos="fade-up" className="carousel-caption d-block top-50">
+        <h1 className="mb-5 d-block">Powerful Performance for Any Task</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>
-    <div className="carousel-item c-item" data-bs-interval={4000}>
+    <div className="carousel-item c-item" data-bs-interval={3000}>
       <img src={newImg3} className="d-block w-100 c-image" alt="..." />
-      <div data-aos="fade-up" className="carousel-caption  d-block">
-        <p className="mt-5 fs-3 text-uppercase">Experience the perfect blend of form and function with our collection of sleek and stylish laptops.</p>
-        <h1 className="d-none d-md-block">Sleek and Stylish Designs </h1>
+      <div data-aos="fade-up" className="carousel-caption  d-block top-50">
+        <h1 className="mb-5 d-block">Sleek and Stylish Designs </h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
       
     </div>
     
-    <div  className="carousel-item c-item" data-bs-interval={4000} > 
+    <div  className="carousel-item c-item" data-bs-interval={3000} > 
       <img src={newImg4} className="d-block w-100 c-image" alt="..." />
-      <div data-aos="fade-up" className="carousel-caption d-block">
-        <p className="mt-5 fs-3 text-uppercase">Never miss a beat with our laptops' seamless connectivity options.</p>
-        <h1 className="d-none d-md-block"> Stay Connected Anywhere, Anytime</h1>
+      <div data-aos="fade-up" className="carousel-caption d-block top-50">
+        <h1 className="mb-5 d-block"> Stay Connected Anywhere, Anytime</h1>
         <Button  type="primaryy">Shop Now</Button>
       </div>
     </div>

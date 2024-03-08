@@ -18,7 +18,7 @@
 .Laptops li{
     border: 1px solid #ddd;
     height: 400px;
-    transition: 0.2s;
+    transition: 0.3s;
     position: relative;
 }
 .Laptops li:hover{
@@ -60,4 +60,12 @@ opacity: 1;
 }
 .Laptops .btn-abs:nth-of-type(2){
     top: 65px;
+}
+.showDetails{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    background-color: var(--light-red);
+    color: #333;
+    padding: 7px 12px;
 }
