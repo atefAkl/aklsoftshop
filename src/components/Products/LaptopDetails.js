@@ -62,7 +62,7 @@ function LaptopDetails() {
   return (
     <div className='productDetails' data-aos="zoom-in" >
         <button onClick={()=>dispatch({type:"closed"})} className='closeDetails'><CloseOutlinedIcon/></button>
-        <h3 className='head'>{brand} {model}</h3>
+        <h4 className='head p-2'>{brand} {model}</h4>
         <Slider {...settings}>
         {images.map((img, idx) => (
             <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>

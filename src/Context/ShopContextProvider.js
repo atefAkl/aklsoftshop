@@ -44,7 +44,12 @@ function ShopContextProvider({children}) {
     const [emoji,setEmoji] = useState("","Emoji");
     const [lat,lng] = myPosition;
     const [{showDetails,LaptopId},dispatch]= useReducer(reducer,initialState);
-function handleOpen(){
+    const [Brand,setBrand] = useState("")
+    const [Processor,setProcessor] = useState("")
+    const [Storage,setStorage] = useState("")
+    const [Ram,setRam] = useState("")
+
+    function handleOpen(){
         setIsOpened((isOpened) => !isOpened);
     }
 function addToCart(itemId){
@@ -125,11 +130,11 @@ function removeFromFav(Id){
         isOpened,
         addToCart,
         removeFromCart,cartItems,
-        getTotalPrice,getTotalAmount,
+        getTotalPrice,getTotalAmount,setRam,
         getDefaultCart,setCartItems,deleteItemFromCart,
-        addToFav,removeFromFav,FavItems,
-        getTotalFavs,getPosition,dispatch,showDetails,LaptopId,
-        position,isLoading,cityName,country,emoji
+        addToFav,removeFromFav,FavItems,setProcessor,setStorage,
+        getTotalFavs,getPosition,dispatch,showDetails,LaptopId,setBrand,
+        position,isLoading,cityName,country,emoji,Brand,Processor,Storage,Ram
 
     }}>
     {children}

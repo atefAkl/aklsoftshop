@@ -65,7 +65,9 @@ opacity: 1;
     position: absolute;
     right: 10px;
     bottom: 10px;
-    background-color: var(--light-red);
+    border: none;
     color: #333;
+    background-color: transparent;
+    text-decoration: underline;
     padding: 7px 12px;
 }
