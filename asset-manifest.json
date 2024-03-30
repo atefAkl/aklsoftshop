@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aklsoftshop/static/css/main.6f4e5b4f.css",
-    "main.js": "/aklsoftshop/static/js/main.585fe0e3.js",
+    "main.js": "/aklsoftshop/static/js/main.d1aa0278.js",
     "static/css/318.8d7f6ffb.chunk.css": "/aklsoftshop/static/css/318.8d7f6ffb.chunk.css",
     "static/js/318.c61e54b6.chunk.js": "/aklsoftshop/static/js/318.c61e54b6.chunk.js",
     "static/js/453.68693753.chunk.js": "/aklsoftshop/static/js/453.68693753.chunk.js",
@@ -57,13 +57,13 @@
     "static/media/slick.woff": "/aklsoftshop/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/aklsoftshop/index.html",
     "main.6f4e5b4f.css.map": "/aklsoftshop/static/css/main.6f4e5b4f.css.map",
-    "main.585fe0e3.js.map": "/aklsoftshop/static/js/main.585fe0e3.js.map",
+    "main.d1aa0278.js.map": "/aklsoftshop/static/js/main.d1aa0278.js.map",
     "318.8d7f6ffb.chunk.css.map": "/aklsoftshop/static/css/318.8d7f6ffb.chunk.css.map",
     "318.c61e54b6.chunk.js.map": "/aklsoftshop/static/js/318.c61e54b6.chunk.js.map",
     "453.68693753.chunk.js.map": "/aklsoftshop/static/js/453.68693753.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6f4e5b4f.css",
-    "static/js/main.585fe0e3.js"
+    "static/js/main.d1aa0278.js"
   ]
 }
