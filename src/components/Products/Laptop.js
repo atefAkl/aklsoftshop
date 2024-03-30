@@ -1,6 +1,7 @@
 import React from "react";
 import "./LaptopsList.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
+import { Link, NavLink } from "react-router-dom";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
@@ -9,7 +10,6 @@ import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
 import Button from "../Reusable-Components/Button";
 import { useAuthContext } from "../../Context/AuthContextProvider";
 import { useShopContext } from "../../Context/ShopContextProvider";
-import { type } from "@testing-library/user-event/dist/type";
 
 function Laptop({ lap }) {
   const { User } = useAuthContext();
@@ -74,9 +74,11 @@ function Laptop({ lap }) {
       data-aos="zoom-out-up"
       className="col-12 col-md-6 col-lg-4 text-center text-md-start"
     >
-      <div className="imageWrapper">
-        <img width="100%" src={lap.image} />
-      </div>
+      <Link to={"/appLayout/Products/" + lap.id}>
+        <div className="imageWrapper">
+          <img width="100%" src={lap.image} />
+        </div>
+      </Link>
       <div className="details p-2">
         <p className="laptopName">{lap.brand}</p>
         <p className="desc">
