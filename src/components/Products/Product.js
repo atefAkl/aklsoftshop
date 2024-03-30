@@ -68,9 +68,12 @@ function Product({ lap }) {
   }
   return (
     <li className="col-12 col-md-6 col-lg-4 text-center text-md-start">
-      <Link to={`${lap.id}`} style={{ textDecoration: "none" }}>
+      <Link
+        to={"/appLayout/Products/" + lap.id}
+        style={{ textDecoration: "none" }}
+      >
         <div className="imageWrapper">
-          <img width="100%" src={lap.image} alt=""/>
+          <img width="100%" src={lap.image} alt="" />
         </div>
         <div className="details p-2">
           <p className="laptopName">{lap.brand}</p>
