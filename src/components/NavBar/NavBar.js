@@ -84,7 +84,7 @@ function NavBar() {
             </li>
             {User == null ? (
               <li className="nav-item" title="register">
-                <NavLink className="nav-link text-center" to="/register">
+                <NavLink className="nav-link text-center" to="/register/login">
                   <LoginIcon />
                   <span className="d-block d-md-none">Login</span>
                 </NavLink>

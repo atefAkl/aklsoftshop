@@ -69,12 +69,12 @@ const Links = () => {
         <ul>
           <h5>Account</h5>
           <li>
-            <Link className="navbar-brand" to="/appLayout/profile">
+            <Link className="navbar-brand" to="/register/login">
               Login
             </Link>
           </li>
           <li>
-            <Link className="navbar-brand" to="/appLayout/profile">
+            <Link className="navbar-brand" to="/register/signup">
               Register
             </Link>
           </li>
