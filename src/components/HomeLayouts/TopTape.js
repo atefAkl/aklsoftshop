@@ -1,26 +1,21 @@
-import React from 'react'
-import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
+import React from "react";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
+import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import "./TopTape.css";
-import LocationOnIcon from '@mui/icons-material/LocationOn';
-import { useShopContext } from '../../Context/ShopContextProvider';
+
 function TopTape() {
-    const {getPosition,position,isLoading,cityName,country,emoji}= useShopContext();
   return (
-    
-    <div className='TopTap'>
-    <div className='container'> 
-    <div className='left'>
-       {!position && (<button onClick={getPosition} className='locationBtn'><LocationOnIcon/> {isLoading ? "...loading" : "Use Your Location"}</button> )} 
-       {position && (<p className='address mt-2 fw-bold'><LocationOnIcon/> {emoji} {cityName},{country}</p>)}
+    <div className="TopTap">
+      <div style={{ width: "90%", margin: "auto" }}>
+        <div className="right">
+          <div>
+            <LocalPhoneIcon /> Phone: 009667660005
+            <AlternateEmailIcon /> Email: sales@aklsoft.com
+          </div>
+        </div>
+      </div>
     </div>
-    <div className='right'>
-        <div><LocalPhoneIcon/> Call 199123</div>
-        <div className='d-none d-md-block'>English</div>
-    </div>
-</div>
-    </div>
-    
-  )
+  );
 }
 
-export default TopTape
+export default TopTape;

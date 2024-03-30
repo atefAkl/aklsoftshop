@@ -1,25 +1,29 @@
-.btn{
-    padding: 10px 20px;
-    border: none;
-    transition: 0.5s;
+.btn {
+  padding: 10px 20px;
+  border: none;
+  transition: 0.5s;
 }
-.primaryy{
-    background-color: var(--green);
+.btn-primary {
+  background-color: var(--green);
 }
-.primaryy:hover{
-    background-color: #fff;
-    border: 1px solid var(--green);
+.btn-primary:hover {
+  background-color: #fff;
+  border: 1px solid var(--green);
 }
-.dark{
-    background-color: var(--black);
-    color: var(--silver);
+.btn-dark {
+  background-color: var(--black);
+  color: var(--silver);
 }
-.dark:hover{
-    background-color: #fff;
-    border: 1px solid var(--black);
+.btn-dark:hover {
+  background-color: #fff;
+  border: 1px solid var(--black);
 }
-.logout{
-    background-color: var(--light-red);
-    padding: 5px 10px;
-    border-radius: 30px;
+.logout {
+  color: #aaa;
+  background-color: transparent;
+  padding: 0px 10px;
+  border-radius: 30px;
+}
+.logout:hover {
+  color: #ccc;
 }

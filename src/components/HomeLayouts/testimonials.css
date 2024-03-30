@@ -1,0 +1,30 @@
+.testimonials {
+  padding: 100px 0;
+}
+.testimonials .slide-item {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5px;
+}
+.testimonials .slide-item:hover {
+  box-shadow: 0 0 5px 1px var(--grey-light-dark);
+}
+.testimonials img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}

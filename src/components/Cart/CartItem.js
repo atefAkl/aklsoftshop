@@ -1,34 +1,44 @@
-import React from 'react'
-import { useShopContext } from '../../Context/ShopContextProvider'
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
-function CartItem({lap}) {
-    const {cartItems,addToCart,removeFromCart,deleteItemFromCart} = useShopContext();
-    const LapTotalPrice = Math.round(cartItems[lap.id] * lap.price);
+import React from "react";
+import { useShopContext } from "../../Context/ShopContextProvider";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import RemoveCircleIcon from "@mui/icons-material/RemoveCircle";
+
+function CartItem({ lap }) {
+  const { cartItems, addToCart, removeFromCart, deleteItemFromCart } =
+    useShopContext();
+  const LapTotalPrice = Math.round(cartItems[lap.id] * lap.price);
   return (
-    <div className='cartItem row mb-4 align-items-center px-1'>
-    <button className='delItem' onClick={()=>deleteItemFromCart(lap.id)}><CloseOutlinedIcon/></button>
-    <div className='col-6 d-flex fColum'>
-        <div className='wrapImage'>
-            <img src={lap.image}/>
+    <tr className="cartItem" key={lap.id}>
+      <td className="imageWrapper">
+        <img src={lap.image} alt="" width={50} />
+      </td>
+      <td className="laptopDetails">
+        <h4>{lap.brand}</h4>
+        <p>{lap.model}</p>
+      </td>
+      <td className="laptopPrice">
+        <div className="controls">
+          <span className="plus" onClick={() => addToCart(lap.id)}>
+            <AddCircleIcon />
+          </span>
+          <span className="itemCount">{cartItems[lap.id]}</span>
+          <span
+            className="minus"
+            onClick={() => {
+              removeFromCart(lap.id);
+            }}
+          >
+            <RemoveCircleIcon />
+          </span>
+          <span className="delItem" onClick={() => deleteItemFromCart(lap.id)}>
+            <DeleteForeverIcon />
+          </span>
         </div>
-        <div className='details'>
-            <p className='mb-0'>{lap.brand}</p>
-            <p>{lap.model}</p>
-        </div>
-    </div>
-
-    <div className='col-3'>
-            <p>{LapTotalPrice}$</p>
-    </div>
-    <div className='col-3 LColum'>
-       <button onClick={()=>{removeFromCart(lap.id)}}>&larr;</button>
-       <span>{cartItems[lap.id]}</span>
-       <button onClick={()=>addToCart(lap.id)}>&rarr;</button>
-    </div>
-
-
-    </div>
-  )
+        <div className="price">{LapTotalPrice} $</div>
+      </td>
+    </tr>
+  );
 }
 
-export default CartItem
+export default CartItem;

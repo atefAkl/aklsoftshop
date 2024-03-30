@@ -1,22 +1,30 @@
- .carousel{
-    margin-top: 127px;
-    /* height: 100vh !important; */
+.carousel {
+  margin-top: 70px;
+  /* height: 100vh !important; */
 }
 
-.c-item{
-    height: 610px;
+.c-item {
+  height: 610px;
 }
-.c-image{
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.6);
+.c-image {
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
 }
-.carousel-caption{
-    margin-top: -20px !important;
+.carousel-caption {
+  margin-top: -20px !important;
 }
-.shop{
-    padding: 10px 20px;
-    background-color: var(--light-red);
-    color: #000;
-    font-weight: bold;
+.shop {
+  padding: 5px 20px;
+  border: 0;
+  outline: 0;
+  box-shadow: 0 0 5px 3px var(--grey-medium-dark);
+  background-color: var(--blue-dark-dark);
+  color: var(--grey-light);
+  font-weight: bold;
+}
+.shop:hover {
+  box-shadow: 0 0 5px 3px var(--grey-medium);
+  background-color: var(--blue-dark);
+  transform: scale(1.01);
 }

@@ -1,44 +1,50 @@
-.footer{
-    line-height: 2.1;
-    background-color: #333;
-    color: var(--silver);
-    padding: 60px 30px;
+.footer {
+  line-height: 2.1;
+  background-color: var(--blue-dark-dark);
+  color: var(--grey-light);
+  padding: 60px 30px;
 }
-.footer .row{
-    border-bottom: 1px solid #777;
+.footer .row {
+  border-bottom: 1px solid var(--grey-dark);
 }
-.footer ul{
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.footer .links {
+  display: flex;
 }
-.footer ul li{
-    cursor: pointer;
-    transition: 0.3s;
+.footer .links ul {
+  list-style: none;
+  flex: auto;
+  padding: 0;
+  margin: 0;
 }
-.footer ul li:hover{
-    text-decoration: underline;
-    color: #fff;
+.footer ul li {
+  cursor: pointer;
+  transition: 0.3s;
 }
-.footer h4,.footer h5{
-    color: #fff;
+.footer ul li:hover {
+  text-decoration: underline;
+  color: #fff;
 }
-.footer .icons{
-    display: flex;
-    gap: 20px;
+.footer h4,
+.footer h5 {
+  color: #fff;
 }
-.footer .subscription{
-    display: flex;
-    gap: 30px;
+.footer .icons {
+  display: flex;
+  gap: 20px;
 }
-.footer .subscription input{
-    width: 312px;
-    border: none;
-    background: transparent;
-    border-bottom: 2px solid green;
-    outline: none;
-    color: var(--silver);
+.footer .subscription {
+  display: flex;
+  gap: 30px;
 }
-.footer img{
-    width: 100%;
+.footer .subscription input {
+  width: 312px;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid var(--grey-light);
+  outline: none;
+  color: var(--silver);
+}
+.footer img {
+  text-shadow: 0 0 5px #ccc;
+  width: 100%;
 }

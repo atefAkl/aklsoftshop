@@ -1,20 +1,39 @@
-.advSec span{
-    color: var(--green);
+.advSec div {
+  display: block;
+  color: var(--green);
 }
-.advSec span svg{
-    height: 70px;
-    width: 70px;
-    aspect-ratio: 3/2;
-    object-fit: contain;
+.Advantages {
+  margin: 0 auto;
 }
-.advSec > div{
-    display: flex;
-    gap: 15px;
-  
+.Advantages .advantagesItem {
+  flex-direction: column;
+  text-align: center;
 }
-.advSec > div h5{
-    font-weight: bold;
+
+.Advantages .advSec.container {
+  margin: 0 auto;
 }
-.advSec > div p{
-    color: var(--brown);
+
+.Advantages .advantagesIcon {
+  display: block;
+  height: 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advSec span svg {
+  height: 70px;
+  width: 70px;
+  aspect-ratio: 3/2;
+  object-fit: contain;
+}
+.advSec > div {
+  display: flex;
+  gap: 15px;
+}
+.advSec > div h5 {
+  font-weight: bold;
+}
+.advSec > div p {
+  color: var(--brown);
 }

@@ -1,26 +1,78 @@
+@import url("https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.GoldContainer {
+  margin: 0 auto;
+}
+.brands {
+  width: 110%;
+  margin: 0 -5%;
+  background-color: var(--grey-light-dark);
+  box-shadow: 0 0 10px 5px var(--blue-dark-dark) inset;
+}
+
+.home #Toast .Toastify__toast-container {
+  position: fixed;
+  top: 120px;
+}
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-:root{
-  --dark-blue:#641aff;
-  --light-sky:#8bfcfe;
-  --light-red : #f64848;
-  --light-green : #80f9b7;
-  --light-blue : #9abdeb;
-  --green : #80c343;
-  --brown:#222;
-  --black:#262626;
-  --silver:#c4c4c4;
-  --white-yollow:#f5f5f3;
-  --icons : #33475b;
+:root {
+  --bg-dark-blue: #5e7a99;
+
+  --blue-dark-dark: #192a56;
+  --blue-dark: #273c75;
+
+  --blue-medium-dark: #40739e;
+  --blue-medium: #487eb0;
+
+  --blue-light-dark: #0097e6;
+  --blue-light: #00a8ff;
+
+  --green-dark: #44bd32;
+  --green: #4cd137;
+
+  --yellow-dark: #e1b12c;
+  --yellow: #fbc531;
+
+  --purple-dark: #8c7ae6;
+  --purple: #9c88ff;
+
+  --red-dark: #c23616;
+  --red: #e84118;
+  --red-light: #814444;
+
+  --grey-light-dark: #dcdde1;
+  --grey-light: #f5f6fa;
+
+  --grey-medium-dark: #718093;
+  --grey-medium: #7f8fa6;
+
+  --grey-dark-dark: #2f3640;
+  --grey-dark: #353b48;
+
+  --dark-blue: #641aff;
+  --light-sky: #8bfcfe;
+  --light-green: #80f9b7;
+  --light-blue: #9abdeb;
+  --green: #80c343;
+  --brown: #222;
+  --black: #262626;
+  --silver: #c4c4c4;
+  --white-yollow: #f5f5f3;
+  --icons: #33475b;
 }

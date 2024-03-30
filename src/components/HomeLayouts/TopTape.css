@@ -1,36 +1,31 @@
-.TopTap{
-    position: fixed;
-    top: 0;
-    left:0;
-    width: 100%;
-    height: 45px;
-    background-color: var(--light-red);
-    z-index: 999;
-    padding: 5px;
-    color: #fff;
-    color: #333;
+.TopTap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 36px;
+  overflow: hidden;
+  background-color: #fff;
+  z-index: 999999;
+  padding: 5px;
+  color: #333;
 }
-.TopTap .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.TopTap .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.TopTap .container >div{
-    display: flex;
-    justify-content: space-between;
+.TopTap .container > div {
+  display: flex;
+  justify-content: space-between;
 }
-.TopTap .container > .right{
-    width: 180px;
+.TopTap .container > .right {
+  width: auto;
+  font-size: 12px;
 }
-.TopTap .locationBtn{
-    padding: 5px 10px;
-    background-color: #333;
-    color: var(--silver);
-    border-radius: 30px;
-    outline: none; 
-}
-@media screen and (max-width:500px) {
-    .address{
-        font-size: 13px;
-    }
+
+@media screen and (max-width: 500px) {
+  .address {
+    font-size: 13px;
+  }
 }
